@@ -19,11 +19,7 @@ function createMarcupItems(arr) {
     .join('');
 }
 list.insertAdjacentHTML('beforeend', createMarcupItems(galleryItems));
-list.addEventListener('click', handlerClick);
-function handlerClick(event) {
-  event.preventDefault();
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-    captionsData: 'alt',
-  });
-}
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
+  captionsData: 'alt',
+});
